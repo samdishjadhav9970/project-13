@@ -28,7 +28,7 @@ body {
     margin: 0 auto;
 }
 
-/*----------------------- navbar --------------------------*/
+/*--- navbar ----*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -36,12 +36,12 @@ body {
     align-items: center;
 }
 .navbar .logo img {
-    width: 100px;
+    width: 6.25rem;
 }
 .navbar .list {
     list-style-type: none;
     display: flex;
-    gap: 50px;
+    gap: 3.12rem;
     color: #FFFFFF;
     font-weight: lighter;
     align-items: center;
@@ -55,24 +55,29 @@ body {
     font-weight: lighter;
     border-radius: 4px;
 }
+.navbar .list .list-item button:hover{
+    color:var(--primary);
+    background-color:var(--white);
 
+}
 
 /*------------------------- hero section -----------------------*/
 
 .hero {
+    height:80vh;
     display: flex;
-    margin-top: 50px;
-    gap: 40px;
+    margin-top: 3.12rem;
+    gap: 2.5rem;
 }
 .hero .hero-left h1 {
     color: var(--white);
     font-size: 3.4rem;
     line-height: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 1.8rem;
 }
 .hero .hero-left p {
     color: var(--white);
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 400;
 }
 .hero .hero-left button {
@@ -83,13 +88,18 @@ body {
     text-transform: uppercase;
     font-weight: lighter;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: lighter;
-    margin-top: 40px;
+    margin-top: 2.5rem;
     cursor: pointer;
 }
+.hero .hero-left button:hover{
+    color:var(--primary);
+    background-color:var(--white);
+
+}
 .hero .hero-right {
-    margin-top: -80px;
+    margin-top: -5rem;
 }
 .hero .hero-right img {
     width: 650px;
@@ -102,24 +112,24 @@ body {
 .features {
     display: flex;
     align-items: center;
-    gap: 120px;
-    margin-top: 70px;
+    gap: 7.5rem;
+    margin-top: 4.3rem;
 }
 .features .feature-left img {
     width: 500px;
 }
 .features .feature-right h4 {
     font-size: 1.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 .features .feature-right .list {
     display: flex;
     list-style-type: none;
-    gap: 22px;
+    gap: 1.375rem;
     flex-direction: column;
 }
 .features .feature-right .list .list-item p {
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 .features .feature-right .list .list-item h6 {
     font-size: 1.1rem;
@@ -139,6 +149,7 @@ body {
     margin-bottom: 40px;
 }
 .customer .customer-cards {
+    flex-wrap: wrap;
     display: flex;
     gap: 40px;
     justify-content: center;
@@ -198,3 +209,154 @@ body {
     font-size: 13px;
     margin-top: 4px;
 }
+
+@media only screen and (max-width:1200px) {
+    .navbar {
+        margin: 0 10px;
+    }
+    .hero-left h1{
+        font-size: 1.2rem;
+        margin-left:30px;
+    }
+    .hero-left p{
+        font-size:8px;
+        margin-left:30px;
+    }
+    .hero-left button{
+        margin-left: 20px;
+    }
+    
+    .bg {
+        width:100vw;
+       
+        background-size: cover;
+    }
+    
+}
+@media  only screen and (max-width:1050px) {
+    .list-item{
+        display:none;
+    }
+    .list-item-btn{
+        display: inline-block;
+    }
+    .navbar {
+        margin: 0 10px;
+    }
+    .features .feature-left img {
+        width: 400px;
+    }
+    .navbar .list{
+        gap:1.3rem;
+    }
+    .features {
+        margin-top: 2rem;
+      
+        gap: 2.5rem;
+  
+    }
+    .hero{
+        display: inline;
+    }
+    .hero .hero-left h1 {
+        font-size: 2rem;
+        text-align: center;
+        line-height: 40px;
+    }
+    .hero-left button{
+        left: 35%;
+        position: absolute;
+    }
+    br {
+        display: none;
+    }
+    .container {
+        max-width: 80rem;
+       
+    }
+    .bg{
+        height:40rem;
+    }
+
+    
+}
+@media  only screen and (max-width:600px) {
+    .navbar .list{
+        display:none;
+    }
+    .hero .hero-right img {
+        width: 50vw;
+        margin-top:50%;
+    } 
+    .hero .hero-left button{
+        margin-left:2rem;
+    }
+    .bg{
+            height:35rem;
+        }
+    .features .feature-left img {
+            width: 50vw;
+        }  
+       
+        .navbar .list{
+            gap:0.5rem;
+        } 
+        .navbar .list .list-item:last-child button{
+            padding: 10px 10px;
+       
+        }
+        .hero .hero-left h1 {
+            font-size: 1.5rem;
+            line-height: 40px;
+        }
+        .hero .hero-left p{
+            font-size:0.6rem;
+        }
+    
+    }
+  
+
+    @media  only screen and (max-width:400px) {
+        .navbar .list{
+            display:none;
+        }
+        .bg{
+            min-height:110vh;
+        }
+        .hero .hero-left h1 {
+            font-size: 1.2rem;
+            line-height: 40px;
+        }
+        .hero {
+            margin-top:2rem;
+            flex-direction: column;
+        }
+        .hero .hero-right {
+            margin-top: -10rem;
+        }
+        .hero .hero-left{
+            margin:0 2rem;
+        }
+       
+        .hero .hero-right img {
+            width: 100vw;
+        }
+        .features{
+            margin-top:10rem;
+            flex-direction: column-reverse;
+        }
+        .features .feature-left img {
+            width: 100vw;
+        }
+        .features .feature-right {
+            margin:0 2rem;
+           
+        }
+        .customer h2 {
+            font-size:1.5rem;
+            margin:0 2rem;
+        }
+        .navbar .logo img {
+            width: 5rem;
+        }
+    }
